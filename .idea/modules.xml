@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GuardarEstado.iml" filepath="$PROJECT_DIR$/GuardarEstado.iml" group="GuardarEstado" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="GuardarEstado/app" />
+      <module fileurl="file://$PROJECT_DIR$/GuardarEstado.iml" filepath="$PROJECT_DIR$/GuardarEstado.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GuardarEstado.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GuardarEstado.app.iml" />
     </modules>
   </component>
 </project>

@@ -26,6 +26,17 @@ public class BundleActivity extends Activity {
 	}
 
 	@Override
+	protected void onPause() {
+		super.onPause();
+
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+	}
+
+	@Override
 	protected void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);//Siempre llame a super (guarda estado de Views)
 		//si comenta esta linea no se guarda el estado
