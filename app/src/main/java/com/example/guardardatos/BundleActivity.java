@@ -3,6 +3,7 @@ package com.example.guardardatos;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -41,7 +42,7 @@ public class BundleActivity extends Activity {
 		super.onSaveInstanceState(outState);//Siempre llame a super (guarda estado de Views)
 		//si comenta esta linea no se guarda el estado
 		//pruebe cambiando la orientacion de la pantalla
-		//outState.putString("MSG", msg);
+		outState.putString("perro", msg);
 	}
 
 	//Solo se invoca si el bundle no es null
@@ -50,7 +51,7 @@ public class BundleActivity extends Activity {
 	    super.onRestoreInstanceState(savedInstanceState);//Siempre llame a super (restaura estado de Views)
 		//si comenta esta linea no se restaura el estado
 		//pruebe cambiando la orientacion de la pantalla
-	    //msg = savedInstanceState.getString("MSG");
+	    msg = savedInstanceState.getString("perro");
 	}
 
 	public void guardaMensaje(View v) {
