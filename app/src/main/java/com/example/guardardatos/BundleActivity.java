@@ -16,27 +16,18 @@ public class BundleActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
-		/*
-  		//Si restaura el estado aqui, debe verificar si el bundle no es null
-		if(savedInstanceState != null) {
-			//si comenta esta linea, no se recupera el estado guardado
-			msg = savedInstanceState.getString("MSG");
-		}
-		*/
 	}
 
-	@Override
-	protected void onPause() {
-		super.onPause();
-
+	public void guardaMensaje(View v) {
+		EditText et = (EditText) findViewById(R.id.msg);
+		msg = et.getText().toString();
 	}
 
-	@Override
-	protected void onResume() {
-		super.onResume();
+	public void recuperaMensaje(View v) {
+		Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
 	}
 
+	/*
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);//Siempre llame a super (guarda estado de Views)
@@ -53,14 +44,6 @@ public class BundleActivity extends Activity {
 		//pruebe cambiando la orientacion de la pantalla
 	    msg = savedInstanceState.getString("perro");
 	}
-
-	public void guardaMensaje(View v) {
-		EditText et = (EditText) findViewById(R.id.msg);
-		msg = et.getText().toString();
-	}
-
-	public void recuperaMensaje(View v) {
-		Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
-	}
+	*/
 
 }
